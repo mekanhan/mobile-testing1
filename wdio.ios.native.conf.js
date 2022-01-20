@@ -54,7 +54,7 @@ exports.config = {
         {
             maxInstances: 1,
             'appium:platformName': 'iOS',
-            'appium:deviceName': 'iPhone 12 Pro Max',
+            'appium:deviceName': 'iPhone 13 Pro Max',
             'appium:platformVersion': '14.4',
             'appium:orientation': 'PORTRAIT',
             'appium:automationName': 'XCUITest',
