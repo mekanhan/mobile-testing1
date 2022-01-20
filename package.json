@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "android": "npx wdio run wdio.android.native.conf.js"
+    "android": "npx wdio run wdio.android.native.conf.js",
+    "report": "allure generate --clean ./results/allure-results && allure open"
   },
   "keywords": [],
   "author": "",
