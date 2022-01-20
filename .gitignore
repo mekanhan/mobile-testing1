@@ -1,8 +1,9 @@
 .vscode
 # .apps
-.appiumLogs
+appiumLogs
+allure-report
 node_modules
 results
-..prettierignore
-..prettierrc.json
+.prettierignore
+.prettierrc.json
 package-lock.json
