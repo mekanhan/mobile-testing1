@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "android": "npx wdio run wdio.android.native.conf.js",
+    "clean": "del -f node_modules && del -f package-lock.json && npm install" ,
     "report": "allure generate --clean ./results/allure-results && allure open"
   },
   "keywords": [],
