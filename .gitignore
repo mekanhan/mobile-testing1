@@ -1,8 +1,8 @@
 .vscode
-.apps
+# .apps
 .appiumLogs
 node_modules
-.results
+results
 ..prettierignore
 ..prettierrc.json
 package-lock.json
