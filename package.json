@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "android": "npx wdio run wdio.android.native.conf.js",
     "ios": "npx wdio run wdio.ios.native.conf.js",
-    "clean": "del -f node_modules && del -f package-lock.json && npm install",
+    "clean windows": "del -f node_modules && del -f package-lock.json && npm install",
+    "clean mac": "rf -f node_modules && rf -f package-lock.json && npm install",
     "report": "allure generate --clean ./results/allure-results && allure open"
   },
   "keywords": [],

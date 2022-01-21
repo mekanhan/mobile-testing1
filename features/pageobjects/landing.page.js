@@ -12,16 +12,10 @@ class LandingPage extends Page {
         return $('~Login');
     }
 
-    // get btnForms(){
-    //     return $('~Forms');
-    // }
     /**
      * methods to encapsule automation code to interact with the page
      */
 
-    // async btnForms_tap(){
-    //     await this.btnForms.touchAction('tap');
-    // }
     async btnLogin_tap() {
         await this.btnLogin.touchAction('tap');
     }

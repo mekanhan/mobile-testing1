@@ -1,5 +1,4 @@
-import Page from "./page";
-
+import Page from './page';
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -18,10 +17,6 @@ class LoginPage extends Page {
         return $('~button-LOGIN');
     }
 
-    // get btnForms() {
-    //     return $('~button-FORMS');
-    // }
-
     async txtEmail_setText(email) {
         await this.txtEmail.setValue(email);
     }
@@ -33,11 +28,6 @@ class LoginPage extends Page {
     async btnLogin_tap() {
         await this.btnLogin.touchAction('tap');
     }
-
-    // async btnForms_tap() {
-    //     await this.btnForms_tap.touchAction('tap');
-    // }
-
 }
 
 export default new LoginPage();
