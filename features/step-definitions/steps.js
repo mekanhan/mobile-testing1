@@ -3,6 +3,11 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import LandingPage from '../pageobjects/landing.page';
 import LoginPage from '../pageobjects/login.page';
 
+const pages = {
+    login: LoginPage,
+    landingPage: LandingPage,
+  };
+
 Given(/^I open the demo app$/, async () => {
     await console.log('Mobile app is open');
 });
