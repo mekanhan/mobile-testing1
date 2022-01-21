@@ -1,12 +1,6 @@
-'use strict';
 import { Given, When, Then } from '@cucumber/cucumber';
 import LandingPage from '../pageobjects/landing.page';
 import LoginPage from '../pageobjects/login.page';
-
-const pages = {
-    login: LoginPage,
-    landingPage: LandingPage,
-  };
 
 Given(/^I open the demo app$/, async () => {
     await console.log('Mobile app is open');
@@ -23,11 +17,9 @@ When(/^I unlock device$/, async () => {
 When(/^I navigate to login tab$/, async () => {
     await LandingPage.btnLogin_tap();
 });
-When(/^I navigate to forms tab$/, async () => {
-    await LandingPage.btnForms_tap();
-});
 
-When(/^I initiate login with ([^"]*)? and ([^"]*)?$/,
+When(
+    /^I initiate login with ([^"]*)? and ([^"]*)?$/,
     async (email, password) => {
         await LoginPage.txtEmail_setText(email);
         await LoginPage.txtPassword_setText(password);
