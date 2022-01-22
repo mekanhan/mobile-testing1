@@ -19,5 +19,5 @@ module.exports = class Page {
     return await browser.getTitle();
   }
 
-   
+
 };
