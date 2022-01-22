@@ -7,12 +7,12 @@ npm i
 - To run a script:
 ```
 npm run android
-npm run iOS
+npm run ios
 ```
 ## Reinstall
 - To reinstall dependencies run a script:
 ```
-npm run clean macOS
+npm run clean mac
 npm run clean windows
 ```
 ## Report
