@@ -12,10 +12,14 @@ npm run iOS
 ## Reinstall
 - To reinstall dependencies run a script:
 ```
-npm clean Mac
-npm clean windows
+npm run clean macOS
+npm run clean windows
 ```
-
+## Report
+- To open HTML report run a script:
+```
+npm run report
+```
 ## Environment Variables Setup
 ## macOS
 - Open .zhrc located in user folder, hidden. Go ahead and open it.
