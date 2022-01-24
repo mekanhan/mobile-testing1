@@ -24,7 +24,7 @@ When(/^I navigate to forms tab$/, async () => {
     
 });
 
-When(/^I tap on active button$/, () => {
+When(/^I tap on active button$/, async () => {
 	await formsPage.btnActive_tap();
 });
 
