@@ -1,4 +1,5 @@
 import { Given, When, Then } from '@cucumber/cucumber';
+import formsPage from '../pageobjects/forms.page';
 import LandingPage from '../pageobjects/landing.page';
 import LoginPage from '../pageobjects/login.page';
 
@@ -18,8 +19,17 @@ When(/^I navigate to login tab$/, async () => {
     await LandingPage.btnLogin_tap();
 });
 
-When(
-    /^I initiate login with ([^"]*)? and ([^"]*)?$/,
+When(/^I navigate to forms tab$/, async () => {
+	await LandingPage.btnForms_tap();
+    
+});
+
+When(/^I tap on active button$/, () => {
+	await formsPage.btnActive_tap();
+});
+
+
+When(/^I initiate login with ([^"]*)? and ([^"]*)?$/,
     async (email, password) => {
         await LoginPage.txtEmail_setText(email);
         await LoginPage.txtPassword_setText(password);

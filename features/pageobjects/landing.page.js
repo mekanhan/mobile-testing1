@@ -12,6 +12,10 @@ class LandingPage extends Page {
         return $('~Login');
     }
 
+    get btnForms(){
+        return $('~Forms');
+    }
+
     /**
      * methods to encapsule automation code to interact with the page
      */
@@ -19,6 +23,13 @@ class LandingPage extends Page {
     async btnLogin_tap() {
         await this.btnLogin.touchAction('tap');
     }
+
+    async btnForms_tap(){
+        await this.btnForms.touchAction('tap');
+    }
+
+
+
 }
 
 export default new LandingPage();

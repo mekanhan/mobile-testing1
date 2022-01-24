@@ -5,6 +5,10 @@ import Page from './page';
  */
 class LoginPage extends Page {
 
+    /**
+     * define selectors using getter methods
+     */
+    
     get txtEmail() {
         return $('~input-email');
     }
@@ -17,6 +21,11 @@ class LoginPage extends Page {
         return $('~button-LOGIN');
     }
 
+    
+    /**
+     * methods to encapsule automation code to interact with the page
+     */
+    
     async txtEmail_setText(email) {
         await this.txtEmail.setValue(email);
     }
@@ -28,6 +37,10 @@ class LoginPage extends Page {
     async btnLogin_tap() {
         await this.btnLogin.touchAction('tap');
     }
+
+    
+
+    
 }
 
 export default new LoginPage();
