@@ -29,6 +29,11 @@ When(/^I tap on active button$/, async () => {
 });
 
 
+When(/^I enter ([^"]*)? as the text$/, async (text) => {
+	await formsPage.txtInput_set(text);
+});
+
+
 When(/^I initiate login with ([^"]*)? and ([^"]*)?$/,
     async (email, password) => {
         await LoginPage.txtEmail_setText(email);
@@ -40,3 +45,4 @@ When(/^I initiate login with ([^"]*)? and ([^"]*)?$/,
 Then(/^I close the app$/, async () => {
     await driver.closeApp();
 });
+

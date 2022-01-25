@@ -12,11 +12,17 @@ class FormsPage extends Page{
     btnActive
     btnInactive
     */
+    get txtInput(){
+        return $('~text-input');        // accessibilityID
+    }
 
     get btnActive(){
         return $('~button-Active');
     }
 
+    async txtInput_set(input){
+        await this.txtInput.setValue(input);
+    }
 
     async btnActive_tap(){
         await this.btnActive.touchAction('tap');
