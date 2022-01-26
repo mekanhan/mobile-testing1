@@ -1,4 +1,6 @@
 import { Given, When, Then } from '@cucumber/cucumber';
+import chai, { assert } from 'chai';
+// const expect = require('chai').expect;
 import formsPage from '../pageobjects/forms.page';
 import LandingPage from '../pageobjects/landing.page';
 import LoginPage from '../pageobjects/login.page';
@@ -28,9 +30,11 @@ When(/^I tap on active button$/, async () => {
 	await formsPage.btnActive_tap();
 });
 
+// "([^"]*)?"
 
-When(/^I enter ([^"]*)? as the text$/, async (text) => {
+When(/^I enter "([^"]*)" as the text$/, async (text) => {
 	await formsPage.txtInput_set(text);
+    
 });
 
 

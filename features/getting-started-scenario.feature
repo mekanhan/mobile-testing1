@@ -16,6 +16,6 @@ Feature: Mobile native basic scenario
     When I lock device
     And I unlock device
     When I navigate to forms tab
-    When I enter anything as the text
+    When I enter "anything" as the text
     When I tap on active button
     Then I close the app
