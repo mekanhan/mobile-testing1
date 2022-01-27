@@ -1,6 +1,5 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import chai, { assert } from 'chai';
-// const expect = require('chai').expect;
 import formsPage from '../pageobjects/forms.page';
 import LandingPage from '../pageobjects/landing.page';
 import LoginPage from '../pageobjects/login.page';
@@ -26,16 +25,32 @@ When(/^I navigate to forms tab$/, async () => {
     
 });
 
+When(/^I tap on switch$/, async () => {
+	await formsPage.tglSwitch_tap();
+});
+
 When(/^I tap on active button$/, async () => {
 	await formsPage.btnActive_tap();
 });
 
-// "([^"]*)?"
-
-When(/^I enter "([^"]*)" as the text$/, async (text) => {
+When(/^I enter "([^"]*)" as the text accessibilityID$/, async (text) => {
 	await formsPage.txtInput_set(text);
     
 });
+
+When(/^I enter "([^"]*)" as the text xpath$/, async (text) => {
+	await formsPage.txtInputXpath_set(text);
+});
+
+Then(/^I validate that the entered text is matching with "([^"]*)"$/, async (expected) => {
+	let actual = driver.getText();
+    console.log(actual);
+});
+
+
+
+
+
 
 
 When(/^I initiate login with ([^"]*)? and ([^"]*)?$/,

@@ -12,19 +12,51 @@ class FormsPage extends Page{
     btnActive
     btnInactive
     */
+
+
+    //  ----- Writing Text in Input -----
+
+        //accessibilityID
     get txtInput(){
-        return $('~text-input');        // accessibilityID
+        return $('~text-input');
     }
+        //xpath
+    get txtInputXpath(){ 
+        return $('//android.widget.EditText[@content-desc="text-input"]');
+    }
+    
+    get lblText(){
+        return $('~content-desc');
+    }
+
+    get tglSwitch(){
+        return $('~switch');
+    }
+    
 
     get btnActive(){
         return $('~button-Active');
     }
+    
+    //  --- async  ---
 
     async txtInput_set(input){
         await this.txtInput.setValue(input);
     }
 
-    async btnActive_tap(){
+    async txtInputXpath_set(input){
+        await this.txtInputXpath.setValue(input);
+    }
+
+    async lblText_tap(){
+        await this.lblText.touchAction('tap');
+    }
+
+    async tglSwitch_tap(){
+        await this.tglSwitch.touchAction('tap');
+    }
+
+    async btnActive_tap(element){
         await this.btnActive.touchAction('tap');
     }
 
