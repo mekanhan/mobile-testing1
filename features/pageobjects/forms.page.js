@@ -1,3 +1,4 @@
+import ActionHelper from "../../helpers/actionHelper";
 import Page from "./page";
 
 class FormsPage extends Page{
@@ -26,7 +27,7 @@ class FormsPage extends Page{
     }
     
     get lblText(){
-        return $('~content-desc');
+        return $('~input-text-result');
     }
 
     get tglSwitch(){
@@ -49,7 +50,7 @@ class FormsPage extends Page{
     }
 
     async lblText_tap(){
-        await this.lblText.touchAction('tap');
+        await this.lblText.getText();
     }
 
     async tglSwitch_tap(){

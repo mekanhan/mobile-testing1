@@ -16,8 +16,8 @@ Feature: Mobile native basic scenario
     When I lock device
     And I unlock device
     When I navigate to forms tab
-    When I enter "anything" as the text accessibilityID
-    # When I enter "anything" as the text xpath
+    # When I enter "anything" as the text accessibilityID
+    When I enter "anything" as the text xpath
     Then I validate that the entered text is matching with "anything"
     When I tap on switch
     # When I tap on active button

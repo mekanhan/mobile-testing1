@@ -40,10 +40,11 @@ When(/^I enter "([^"]*)" as the text accessibilityID$/, async (text) => {
 
 When(/^I enter "([^"]*)" as the text xpath$/, async (text) => {
 	await formsPage.txtInputXpath_set(text);
+
 });
 
 Then(/^I validate that the entered text is matching with "([^"]*)"$/, async (expected) => {
-	let actual = driver.getText();
+	let actual = await formsPage.lblText_tap();
     console.log(actual);
 });
 
