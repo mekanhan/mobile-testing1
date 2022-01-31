@@ -1,4 +1,4 @@
-import ActionHelper from "../../helpers/actionHelper";
+import helpers from "../../utils/helpers";
 import Page from "./page";
 
 class FormsPage extends Page{
@@ -37,28 +37,6 @@ class FormsPage extends Page{
 
     get btnActive(){
         return $('~button-Active');
-    }
-    
-    //  --- async  ---
-
-    async txtInput_set(input){
-        await this.txtInput.setValue(input);
-    }
-
-    async txtInputXpath_set(input){
-        await this.txtInputXpath.setValue(input);
-    }
-
-    async lblText_tap(){
-        await this.lblText.getText();
-    }
-
-    async tglSwitch_tap(){
-        await this.tglSwitch.touchAction('tap');
-    }
-
-    async btnActive_tap(element){
-        await this.btnActive.touchAction('tap');
     }
 
 }

@@ -20,13 +20,13 @@ class LandingPage extends Page {
      * methods to encapsule automation code to interact with the page
      */
 
-    async btnLogin_tap() {
-        await this.btnLogin.touchAction('tap');
-    }
+    // async btnLogin_tap() {
+    //     await this.btnLogin.touchAction('tap');
+    // }
 
-    async btnForms_tap(){
-        await this.btnForms.touchAction('tap');
-    }
+    // async btnForms_tap(){
+    //     await this.btnForms.touchAction('tap');
+    // }
 
 
 

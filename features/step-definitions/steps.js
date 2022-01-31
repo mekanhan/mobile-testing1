@@ -1,8 +1,9 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import chai, { assert } from 'chai';
+import helpers from '../../utils/helpers';
 import formsPage from '../pageobjects/forms.page';
-import LandingPage from '../pageobjects/landing.page';
-import LoginPage from '../pageobjects/login.page';
+import landingPage from '../pageobjects/landing.page';
+import loginPage from '../pageobjects/login.page';
 
 Given(/^I open the demo app$/, async () => {
     await console.log('Mobile app is open');
@@ -17,20 +18,20 @@ When(/^I unlock device$/, async () => {
 });
 
 When(/^I navigate to login tab$/, async () => {
-    await LandingPage.btnLogin_tap();
+    await landingPage.btnLogin_tap();
 });
 
 When(/^I navigate to forms tab$/, async () => {
-	await LandingPage.btnForms_tap();
+	await helpers.tapElement(landingPage.btnForms);
     
 });
 
 When(/^I tap on switch$/, async () => {
-	await formsPage.tglSwitch_tap();
+	
 });
 
 When(/^I tap on active button$/, async () => {
-	await formsPage.btnActive_tap();
+	
 });
 
 When(/^I enter "([^"]*)" as the text accessibilityID$/, async (text) => {
@@ -39,7 +40,7 @@ When(/^I enter "([^"]*)" as the text accessibilityID$/, async (text) => {
 });
 
 When(/^I enter "([^"]*)" as the text xpath$/, async (text) => {
-	await formsPage.txtInputXpath_set(text);
+    await helpers.write(formsPage.txtInputXpath,"anything");
 
 });
 
