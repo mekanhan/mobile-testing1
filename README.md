@@ -22,8 +22,7 @@ npm run report
 ```
 ## Environment Variables Setup
 ## macOS
-- Open .zhrc located in user folder, hidden. Go ahead and open it.
-Add this below lines:
+- Open .zhrc located in user folder, hidden. Open it and add these lines:
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_321.jdk/Contents/Home
 export ANDROID_HOME=/Users/mekanhanov/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
