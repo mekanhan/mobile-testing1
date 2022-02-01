@@ -3,6 +3,7 @@ import chai, { assert } from 'chai';
 import formsPage from '../pageobjects/forms.page';
 import LandingPage from '../pageobjects/landing.page';
 import LoginPage from '../pageobjects/login.page';
+const helpers = require('../../helpers/actionHelper');
 
 Given(/^I open the demo app$/, async () => {
     await console.log('Mobile app is open');
@@ -56,9 +57,9 @@ Then(/^I validate that the entered text is matching with "([^"]*)"$/, async (exp
 
 When(/^I initiate login with ([^"]*)? and ([^"]*)?$/,
     async (email, password) => {
-        await LoginPage.txtEmail_setText(email);
-        await LoginPage.txtPassword_setText(password);
-        await LoginPage.btnLogin_tap();
+        await helpers.write(LoginPage.txtEmail,email);
+        await helpers.write(LoginPage.txtPassword,password);
+        await helpers.tapElement(LoginPage.btnLogin);
     },
 );
 

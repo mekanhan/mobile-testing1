@@ -19,28 +19,7 @@ class LoginPage extends Page {
 
     get btnLogin() {
         return $('~button-LOGIN');
-    }
-
-    
-    /**
-     * methods to encapsule automation code to interact with the page
-     */
-    
-    async txtEmail_setText(email) {
-        await this.txtEmail.setValue(email);
-    }
-
-    async txtPassword_setText(password) {
-        await this.txtPassword.setValue(password);
-    }
-
-    async btnLogin_tap() {
-        await this.btnLogin.touchAction('tap');
-    }
-
-    
-
-    
+    }    
 }
 
 export default new LoginPage();
