@@ -20,5 +20,6 @@ Feature: Mobile native basic scenario
     When I enter "anything" as the text xpath
     # Then I validate that the entered text is matching with "anything"
     When I tap on switch
+    When I scroll down to ""
     # When I tap on active button
     Then I close the app

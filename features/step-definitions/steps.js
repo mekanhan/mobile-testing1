@@ -18,35 +18,38 @@ When(/^I unlock device$/, async () => {
 });
 
 When(/^I navigate to login tab$/, async () => {
-    await landingPage.btnLogin_tap();
+    await helpers.tapElement(loginPage.btnLogin);
 });
 
 When(/^I navigate to forms tab$/, async () => {
 	await helpers.tapElement(landingPage.btnForms);
-    
 });
 
 When(/^I tap on switch$/, async () => {
-	
+	await helpers.tapElement(formsPage.tglSwitch);
 });
 
 When(/^I tap on active button$/, async () => {
-	
+	await helpers.tapElement(formsPage.btnActive);
 });
 
 When(/^I enter "([^"]*)" as the text accessibilityID$/, async (text) => {
-	await formsPage.txtInput_set(text);
+	await helpers.write(formsPage.txtInput,text);
     
 });
 
 When(/^I enter "([^"]*)" as the text xpath$/, async (text) => {
-    await helpers.write(formsPage.txtInputXpath,"anything");
-
+    await helpers.write(formsPage.txtInputXpath,text);
 });
 
+
+When(/^I scroll down to "([^"]*)"$/, async (element) => {
+	await helpers.tapElement(formsPage.lblText);
+});
+
+
 Then(/^I validate that the entered text is matching with "([^"]*)"$/, async (expected) => {
-	let actual = await formsPage.lblText_tap();
-    console.log(actual);
+	
 });
 
 
