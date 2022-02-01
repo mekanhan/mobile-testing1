@@ -1,6 +1,7 @@
 appiumLogs
 allure-report
 apps
+.DS_Store
 node_modules
 results
 .prettierignore
