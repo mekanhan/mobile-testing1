@@ -1,9 +1,10 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import chai, { assert } from 'chai';
 import helpers from '../../utils/helpers';
-import formsPage from '../pageobjects/forms.page';
-import landingPage from '../pageobjects/landing.page';
-import loginPage from '../pageobjects/login.page';
+import formsPage from '../page-objects/forms.page';
+import landingPage from '../page-objects/landing.page';
+import loginPage from '../page-objects/login.page';
+
 
 Given(/^I open the demo app$/, async () => {
     await console.log('Mobile app is open');

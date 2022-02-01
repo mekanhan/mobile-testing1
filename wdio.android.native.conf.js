@@ -22,7 +22,7 @@ exports.config = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
-    specs: ['./features/**/*.feature'],
+    specs: ['src/features/*.feature'],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -165,7 +165,7 @@ exports.config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.js'],
+        require: ['src/step-definitions/steps.js'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)

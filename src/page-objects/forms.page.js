@@ -1,5 +1,4 @@
-import helpers from "../../utils/helpers";
-import Page from "./page";
+import Page from '../page-objects/page';
 
 class FormsPage extends Page{
     /*
@@ -14,10 +13,6 @@ class FormsPage extends Page{
     btnInactive
     */
 
-
-    //  ----- Writing Text in Input -----
-
-        //accessibilityID
     get txtInput(){
         return $('~text-input');
     }

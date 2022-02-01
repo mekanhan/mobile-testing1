@@ -1,5 +1,6 @@
 appiumLogs
 allure-report
+apps
 node_modules
 results
 .prettierignore

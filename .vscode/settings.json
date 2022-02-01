@@ -1,7 +1,7 @@
 {
     "cucumberautocomplete.steps": [
-        "features/step-definitions/*.js",
-        "features/step-definitions/**/*.js"
+        "src/step-definitions/*.js",
+        "src/step-definitions/**/*.js"
     ],
     "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then)\\("
 }
