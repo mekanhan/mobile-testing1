@@ -1,8 +1,6 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import chai, { assert } from 'chai';
 import formsPage from '../pageobjects/forms.page';
-import LandingPage from '../pageobjects/landing.page';
-import LoginPage from '../pageobjects/login.page';
 const helpers = require('../../helpers/actionHelper');
 
 Given(/^I open the demo app$/, async () => {
@@ -18,7 +16,8 @@ When(/^I unlock device$/, async () => {
 });
 
 When(/^I navigate to login tab$/, async () => {
-    await LandingPage.btnLogin_tap();
+    helpers.setPage('landingPage');
+    await helpers.tapElement('btnLogin');
 });
 
 When(/^I navigate to forms tab$/, async () => {
@@ -57,9 +56,10 @@ Then(/^I validate that the entered text is matching with "([^"]*)"$/, async (exp
 
 When(/^I initiate login with ([^"]*)? and ([^"]*)?$/,
     async (email, password) => {
-        await helpers.write(LoginPage.txtEmail,email);
-        await helpers.write(LoginPage.txtPassword,password);
-        await helpers.tapElement(LoginPage.btnLogin);
+        helpers.setPage('loginPage');
+        await helpers.write('txtEmail',email);
+        await helpers.write('txtPassword',password);
+        await helpers.tapElement('btnLogin');
     },
 );
 

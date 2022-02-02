@@ -5,21 +5,9 @@ import Page from './page';
  */
 class LoginPage extends Page {
 
-    /**
-     * define selectors using getter methods
-     */
-    
-    get txtEmail() {
-        return $('~input-email');
-    }
-
-    get txtPassword() {
-        return $('~input-password');
-    }
-
-    get btnLogin() {
-        return $('~button-LOGIN');
-    }    
+    txtEmail = $('~input-email');
+    txtPassword = $('~input-password');
+    btnLogin = $('~button-LOGIN'); 
 }
 
-export default new LoginPage();
+module.exports = new LoginPage();
