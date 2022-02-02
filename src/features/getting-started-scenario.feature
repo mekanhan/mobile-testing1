@@ -1,4 +1,4 @@
-@iOS @mobile-web
+@ios @mobile-web
 Feature: Mobile native basic scenario
 
   @001
