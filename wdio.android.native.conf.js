@@ -62,7 +62,7 @@ exports.config = {
             'appium:newCommandTimeout': 240,
             'appium:app': join(
                 process.cwd(),
-                './apps/Android-NativeDemoApp-0.4.0.apk',
+                './apps/app-F1011ZZ-universal-release.apk',
             ),
             'appium:noReset': true,
             'appium:appWaitActivity': '*',
@@ -165,7 +165,9 @@ exports.config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['src/step-definitions/steps.js'],
+        require: [
+            'src/step-definitions/steps.js',
+            'src/step-definitions/step-def.js'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -185,7 +187,7 @@ exports.config = {
         // <boolean> fail if there are any undefined or pending steps
         strict: false,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
-        tagExpression: '',
+        tagExpression: '@android',
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.
