@@ -8,6 +8,8 @@ Feature: Mobile native basic scenario
     And I unlock device
     And I navigate to login tab
     And I initiate login with someemail@someemail.xxx and password
+    And I am on "loginPage"
+    And I tap on "btnLogin"
     Then I close the app
 
   # @002

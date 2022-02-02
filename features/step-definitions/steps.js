@@ -7,6 +7,10 @@ Given(/^I open the demo app$/, async () => {
     await console.log('Mobile app is open');
 });
 
+Given(/^I am on "([^"]*)"$/, async (page) => {
+    helpers.setPage(page);
+});
+
 When(/^I lock device$/, async () => {
     await driver.lock();
 });
@@ -31,6 +35,10 @@ When(/^I tap on switch$/, async () => {
 
 When(/^I tap on active button$/, async () => {
 	await formsPage.btnActive_tap();
+});
+
+When(/^I tap on "([^"]*)"$/, async (element) => {
+	await helpers.tapElement(element);
 });
 
 When(/^I enter "([^"]*)" as the text accessibilityID$/, async (text) => {
@@ -59,7 +67,6 @@ When(/^I initiate login with ([^"]*)? and ([^"]*)?$/,
         helpers.setPage('loginPage');
         await helpers.write('txtEmail',email);
         await helpers.write('txtPassword',password);
-        await helpers.tapElement('btnLogin');
     },
 );
 
