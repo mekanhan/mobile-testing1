@@ -8,27 +8,25 @@ Given(/^I open the school app$/, async () => {
 	await console.log('Mobile app is open');
 });
 
-Given(/^I am on "([^"]*)"$/, async (page) => {
-    helpers.setPage(page);
-});
-
-When(/^I tap on Got it$/, async () => { helpers.setPage('feedPage');
+When(/^I tab on Got it$/, async () => {
 	try {
-		await helpers.tapElement('btnGotIt');
+		await helpers.tapElement(feedPage.btnGotIt);
 	} catch (error) {
 	}
 });
 
-When(/^I tap on "([^"]*)"$/, async (element) => {
-	await helpers.tapElement(element);
+When(/^I tab on Rooms toggle$/, async () => {
+	await helpers.tapElement(feedPage.tglRooms);
 });
 
 When(/^I enter "([^"]*)" email$/, async (email) => {
-	await helpers.write(txtEmail, email);
+	await helpers.write(feedPage.txtEmail, email);
 });
 
 When(/^I enter "([^"]*)" password$/, async (password) => {
-	await helpers.write(txtPassword, password);
+	await helpers.write(feedPage.txtPassword, password);
 });
 
-
+When(/^I tap on sign in button$/, async () => {
+	await helpers.tapElement(feedPage.btnSignInRooms);
+});
