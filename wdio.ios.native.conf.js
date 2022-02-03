@@ -61,7 +61,7 @@ exports.config = {
             'appium:newCommandTimeout': 240,
             'appium:app': join(
                 process.cwd(),
-                './apps/SchoolApp.app',
+                './apps/AnnetteISD.ipa',
             ),
             'appium:noReset': true,
         },
@@ -183,7 +183,7 @@ exports.config = {
         // <boolean> fail if there are any undefined or pending steps
         strict: false,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
-        tagExpression: 'ios',
+        tagExpression: '',
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.
