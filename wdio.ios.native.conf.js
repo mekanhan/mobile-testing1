@@ -59,7 +59,7 @@ exports.config = {
             'appium:orientation': 'PORTRAIT',
             'appium:automationName': 'XCUITest',
             'appium:newCommandTimeout': 240,
-            // 'appium:app': 'Poly.app',
+            'appium:app': 'apps/AnnetteISD.ipa',
             'appium:bundleID': 'com.apptegy.1003ZZ',
             'appium:noReset': true,
         },
@@ -184,7 +184,7 @@ exports.config = {
         // <boolean> fail if there are any undefined or pending steps
         strict: false,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
-        tagExpression: '',
+        tagExpression: '@ios',
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.
