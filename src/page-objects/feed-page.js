@@ -39,7 +39,6 @@ class FeedPage extends Page {
         return $('//*[@class="android.widget.Button"]');
     }
 
-
     
 
 }

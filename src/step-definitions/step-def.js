@@ -30,3 +30,16 @@ When(/^I enter "([^"]*)" password$/, async (password) => {
 When(/^I tap on sign in button$/, async () => {
 	await helpers.tapElement(feedPage.btnSignInRooms);
 });
+
+When(/^I go back$/, async () => {
+	await helpers.back();
+});
+
+When(/^I open the iOS school app$/, async () => {
+	await driver.launchApp();
+});
+
+When(/^I am on home page$/, async () => {
+	console.log("Home Page step");
+});
+

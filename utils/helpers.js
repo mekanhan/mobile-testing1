@@ -11,10 +11,13 @@ class helpers {
         driver.touchScroll(10, 200, element);
     }
     
-    async getTex(element){
-        let el = await driver.findElement(element);
-        await driver.get
+    async getText(element){
+        await element.getText();
     }
+    async back(){
+        await driver.back();
+    }
+    
 }
 
 module.exports = new helpers();

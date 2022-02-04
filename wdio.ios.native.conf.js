@@ -55,14 +55,12 @@ exports.config = {
             maxInstances: 1,
             'appium:platformName': 'iOS',
             'appium:deviceName': 'iPhone 13 Pro Max',
-            'appium:platformVersion': '15.0',
+            'appium:platformVersion': '15.2',
             'appium:orientation': 'PORTRAIT',
             'appium:automationName': 'XCUITest',
             'appium:newCommandTimeout': 240,
-            'appium:app': join(
-                process.cwd(),
-                './apps/SchoolApp.app',
-            ),
+            // 'appium:app': 'Poly.app',
+            'appium:bundleID': 'com.apptegy.1003ZZ',
             'appium:noReset': true,
         },
     ],
@@ -163,7 +161,10 @@ exports.config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['src/step-definitions/steps.js'],
+        require: [
+            'src/step-definitions/step-def.js',
+            'src/step-definitions/steps.js'
+        ],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -183,7 +184,7 @@ exports.config = {
         // <boolean> fail if there are any undefined or pending steps
         strict: false,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
-        tagExpression: 'ios',
+        tagExpression: '',
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.

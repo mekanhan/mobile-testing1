@@ -7,4 +7,8 @@ Feature: Login in and testing app
         When  I tab on Rooms toggle
         When  I enter "automation.testing+r1@apptegy.com" email
         When  I enter "taco1234" password
+        When  I go back
+        When  I tab on Rooms toggle
+        When  I enter "automation.testing+r1@apptegy.com" email
+        When  I enter "taco1234" password
         When  I tap on sign in button
