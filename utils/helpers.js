@@ -45,6 +45,12 @@ class Helpers {
     async back(){
         await driver.back();
     }
+
+    async scrollTo(element){
+        driver.touchScroll(10, 200, element);
+    }
+  
+    
 }
 
 module.exports = new Helpers();
