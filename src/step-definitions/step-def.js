@@ -1,7 +1,6 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import chai, { assert } from 'chai';
 import helpers from '../../utils/helpers';
-import feedPage from '../page-objects/feed-page';
 
 
 Given(/^I open the school app$/, async () => {
@@ -15,16 +14,20 @@ When(/^I tab on Got it$/, async () => {
 	}
 });
 
+When(/^I tap on "([^"]*)"$/, async (element) => {
+	await helpers.tapElement(element);
+});
+
 When(/^I tab on Rooms toggle$/, async () => {
 	await helpers.tapElement(feedPage.tglRooms);
 });
 
 When(/^I enter "([^"]*)" email$/, async (email) => {
-	await helpers.write(feedPage.txtEmail, email);
+	await helpers.write("txtEmail", email);
 });
 
 When(/^I enter "([^"]*)" password$/, async (password) => {
-	await helpers.write(feedPage.txtPassword, password);
+	await helpers.write("txtPassword", password);
 });
 
 When(/^I tap on sign in button$/, async () => {
@@ -41,5 +44,9 @@ When(/^I open the iOS school app$/, async () => {
 
 When(/^I am on home page$/, async () => {
 	console.log("Home Page step");
+});
+
+Given(/^I am on "([^"]*)"$/, async (page) => {
+    helpers.setPage(page);
 });
 
