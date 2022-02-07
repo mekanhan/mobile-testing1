@@ -9,8 +9,8 @@
     "ios": "npx wdio run wdio.ios.native.conf.js",
     "androidBrowser": "wdio ./config/androidBrowser.config.js",
     "iosBrowser": "wdio ./config/iosBrowser.config.js",
-    "clean windows": "del -f node_modules && del -f package-lock.json && npm install",
-    "clean mac": "rm -rf node_modules && rm -rf package-lock.json && npm install",
+    "cleanWindows": "del -f node_modules && del -f package-lock.json && npm install",
+    "cleanMac": "rm -rf node_modules && rm -rf package-lock.json && npm install",
     "report": "allure generate --clean ./results/allure-results && allure open"
   },
   "keywords": [],
