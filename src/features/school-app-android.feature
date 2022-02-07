@@ -4,7 +4,7 @@ Feature: Login in and testing app
     Scenario: As a user, I login to the school app
         Given I open the school app
         And   I am on "feedPage"
-        And   I tab on Got it
+        And   I tap on "btnGotIt"
         When  I tap on "tglRooms"
         When  I enter "automation.testing+r1@apptegy.com" email
         When  I enter "taco1234" password

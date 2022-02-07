@@ -56,7 +56,7 @@ exports.config = {
             maxInstances: 1,
             'appium:platformName': 'Android',
             'appium:platformVersion': '11.0',
-            'appium:deviceName': 'nexus5x',
+            'appium:deviceName': 'Pixel_3a_API_30_x86',
             'appium:orientation': 'PORTRAIT',
             'appium:automationName': 'UiAutomator2',
             'appium:newCommandTimeout': 240,
