@@ -12,4 +12,5 @@ Feature: Login in and testing app
         When  I tap on "tglRooms"
         When  I enter "automation.testing+r1@apptegy.com" email
         When  I enter "taco1234" password
+        When I check current package
         When  I tap on "btnSignInRooms"

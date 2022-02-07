@@ -30,10 +30,6 @@ When(/^I tap on switch$/, async () => {
 	await helpers.tapElement(formsPage.tglSwitch);
 });
 
-When(/^I tap on active button$/, async () => {
-	await helpers.tapElement(formsPage.btnActive);
-});
-
 When(/^I enter "([^"]*)" as the text accessibilityID$/, async (text) => {
 	await helpers.write(formsPage.txtInput,text);
     

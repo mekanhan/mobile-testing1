@@ -1,6 +1,6 @@
 const Page = require("./page");
 
-class HomePageIOS extends Page {
+class HomePage extends Page {
 
     get lblHome(){
         return $('name=Home');
@@ -38,4 +38,4 @@ class HomePageIOS extends Page {
     }
 
 }
-export default new HomePageIOS();
+module.exports = new HomePage();

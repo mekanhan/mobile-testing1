@@ -1,12 +1,14 @@
 const loginPage = require('../src/page-objects/login.page');
 const landingPage = require('../src/page-objects/landing.page');
-const feedPage = require('../src/page-objects/feed-page')
+const feedPage = require('../src/page-objects/feed-page');
+const homePage = require('../src/page-objects/home-page');
 let page = null;
 class Helpers {
     pages = {
         loginPage : loginPage,
         landingPage : landingPage,
-        feedPage : feedPage
+        feedPage : feedPage,
+        homePage : homePage
     };
 
     setPage(pageName) {
@@ -49,7 +51,7 @@ class Helpers {
     async scrollTo(element){
         driver.touchScroll(10, 200, element);
     }
-  
+    
     
 }
 
