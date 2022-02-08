@@ -5,10 +5,10 @@ const homePage = require('../src/page-objects/home-page');
 let page = null;
 class Helpers {
     pages = {
-        loginPage : loginPage,
-        landingPage : landingPage,
-        feedPage : feedPage,
-        homePage : homePage
+      loginPage : loginPage,
+      landingPage : landingPage,
+      feedPage : feedPage,
+      homePage : homePage
     };
 
     setPage(pageName) {

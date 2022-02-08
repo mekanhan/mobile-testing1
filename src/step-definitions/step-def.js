@@ -53,4 +53,14 @@ When(/^I activate the app$/, async () => {
 	await driver.activateApp(bundleID);
 });
 
+When(/^I wait for "([^"]*)" seconds$/, async (seconds) => {
+	await driver.pause(seconds);
+	console.log("Seconds: ------- " + seconds);
+});
+
+When(/^I install the app$/, async () => {
+	await driver.installApp('apps/AnnetteISD.ipa')
+});
+
+
 

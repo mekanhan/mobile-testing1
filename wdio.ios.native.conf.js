@@ -61,7 +61,7 @@ exports.config = {
             'appium:newCommandTimeout': 240,
             // 'appium:app': 'apps/SchoolApp.app',
             'appium:bundleID': 'com.apptegy.1003ZZ',
-            'appium:noReset': true,
+            'appium:noReset': false,
         },
     ],
     //
