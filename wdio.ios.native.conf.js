@@ -58,20 +58,25 @@ exports.config = {
             'appium:platformVersion': '15.2',
             'appium:orientation': 'PORTRAIT',
             'appium:automationName': 'XCUITest',
-            'appium:newCommandTimeout': 240,
-            // 'appium:app': 'apps/SchoolApp.app',
-            'appium:bundleID': 'com.apptegy.1003ZZ',
-            'appium:noReset': false,
+            'appium:newCommandTimeout': 240
+            // 'appium:app': 'apps/SchoolApp1/SchoolApp.ipa',
+            // 'appium:bundleID': 'com.apptegy.1003ZZ',
+            // 'appium:noReset': true,
+            // 'appium:xcodeOrgId': '977CY47F6P',
+            // 'appium:xcodeSigningId': 'iOS Developer',
+            // 'appium:updatedWDABundleId': 'iPhone Developer',
+            // 'appium:udid': 'auto'
+        ,
         },
     ],
-    //
+    // udid: '00008110-000C49580AF2801E' is a serial number of physical device but with a dash after 8's digit
     // ===================
     // Test Configurations
     // ===================
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'silent',
     //
     // Set specific log levels per logger
     // loggers:

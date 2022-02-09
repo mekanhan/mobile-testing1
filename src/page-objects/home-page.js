@@ -10,6 +10,7 @@ class HomePage extends Page {
     btnMenu = $('//XCUIElementTypeButton[@name="Menu"]');
     tglHome = $('//XCUIElementTypeButton[@name="1234567890as"]');
     tglRooms = $('//XCUIElementTypeButton[@name="Rooms"]');
+    tglSchool = $('//XCUIElementTypeButton[@name="1234567890as"]');
     btnClose = $('//XCUIElementTypeApplication[@name="Poly"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[3]/XCUIElementTypeOther/XCUIElementTypeOther[2]');
     btnClose2 = $('//XCUIElementTypeButton[@name="add"]');
     btnSeeAllSchools = $('name=See All Schools');

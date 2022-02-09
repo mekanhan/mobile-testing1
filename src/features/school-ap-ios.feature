@@ -13,3 +13,4 @@ Feature: Login in and iOS School app
         When  I tap on "btnMenu"
         When  I tap on "btnClose2"
         When  I tap on "tglRooms"
+        When  I tap on "tglSchool"

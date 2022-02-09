@@ -44,7 +44,7 @@ Given(/^I am on "([^"]*)"$/, async (page) => {
 When(/^I check current package$/, async () => {
 	currentPackage = await driver.getCurrentPackage();
 	let isAppInstalled = await driver.isAppInstalled(currentPackage);
-	console.log("---------HERE-----\n " + currentPackage);
+	console.log("CURRENT PACKAGE: " + currentPackage);
 	console.log("Is app Installed? " + isAppInstalled);
 
 });
@@ -55,12 +55,8 @@ When(/^I activate the app$/, async () => {
 
 When(/^I wait for "([^"]*)" seconds$/, async (seconds) => {
 	await driver.pause(seconds);
-	console.log("Seconds: ------- " + seconds);
 });
 
-When(/^I install the app$/, async () => {
-	await driver.installApp('apps/AnnetteISD.ipa')
-});
 
 
 
